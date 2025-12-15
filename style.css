@@ -1,0 +1,47 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Ensure the body takes up the full height and width of the viewport */
+    overflow: hidden; /* Prevent scrolling */
+    background: white; /* Matches your renderer background color */
+}
+
+/* 1. Canvas Styling */
+.webgl {
+    /* Make the canvas a block element for better layout control */
+    display: block;
+    /* The renderer automatically sets the size, but this ensures no gaps */
+}
+
+/* 2. Loading Screen Styling (Crucial for Overlay) */
+#landingScreen {
+    position: fixed; 
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* CRITICAL LAYERING */
+    z-index: 9999; 
+    
+    /* Appearance and centering */
+    background: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black; 
+    
+    /* Transition and initial visibility */
+    opacity: 1; 
+    visibility: visible; 
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+#landingScreen p {
+  font-size: 10px;
+}
