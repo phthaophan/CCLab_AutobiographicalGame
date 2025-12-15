@@ -6,4 +6,8 @@ export default defineConfig({
   base: process.env.NODE_ENV === 'production' 
         ? '/CCLab_AutobiographicalGame/' 
         : '/',
+  build: {
+    // This setting tells Vite to keep assets close to the index.html file
+    assetsDir: '.', 
+  }
 });
