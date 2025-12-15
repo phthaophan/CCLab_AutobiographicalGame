@@ -60,7 +60,7 @@ class World {
 
     loadMoi() {
         this.experience.gltfLoader.load(
-            '/meonmoped.glb',
+            'meonmoped.glb',
             (gltf) => {
                 console.log('SUCCESS: Scooter model loaded!');
 
