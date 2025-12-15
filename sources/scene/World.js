@@ -4,7 +4,7 @@ class World {
     constructor(experience) {
         this.experience = experience;
 
-        this.experience.gltfLoader.setPath('/assets/');
+        this.experience.gltfLoader.setPath('assets/');
         this.clock = new THREE.Clock();
 
         // Array to Store Meshes 
