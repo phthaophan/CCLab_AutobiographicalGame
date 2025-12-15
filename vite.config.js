@@ -1,3 +1,8 @@
-export default {
-  base: process.env.NODE_ENV == 'production' ? '/CCLab_AutobiographicalGame/' : ''
-}
+import { defineConfig } from 'vite';
+
+
+export default defineConfig({ 
+  base: process.env.NODE_ENV === 'production' 
+        ? '/CCLab_AutobiographicalGame/'
+        : '/',
+});
