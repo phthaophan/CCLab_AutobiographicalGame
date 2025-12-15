@@ -3,6 +3,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({ 
   base: process.env.NODE_ENV === 'production' 
-        ? '/CCLab_AutobiographicalGame/'
+        ? '/CCLab_AutobiographicalGame/dist/'
         : '/',
 });
