@@ -4,7 +4,7 @@ class World {
     constructor(experience) {
         this.experience = experience;
 
-        this.experience.gltfLoader.setPath('/sources/assets/');
+        this.experience.gltfLoader.setPath('/assets/');
         this.clock = new THREE.Clock();
 
         // Array to Store Meshes 
@@ -90,11 +90,11 @@ class World {
         const textureLoader = new THREE.TextureLoader();
 
         // Load all textures
-        const concreteBaseColor = textureLoader.load('/sources/assets/concreteBaseColor.png');
-        const concreteNormalMap = textureLoader.load('/sources/assets/concreteNormalMap.png');
-        const concreteHeightMap = textureLoader.load('/sources/assets/concreteHeightMap.png');
-        const concreteRoughnessMap = textureLoader.load('/sources/assets/concreteRoughnessMap.png');
-        const concreteAmbientOcclusion = textureLoader.load('/sources/assets/concreteAmbientOcclusionMap.png');
+        const concreteBaseColor = textureLoader.load('/assets/concreteBaseColor.png');
+        const concreteNormalMap = textureLoader.load('/assets/concreteNormalMap.png');
+        const concreteHeightMap = textureLoader.load('/assets/concreteHeightMap.png');
+        const concreteRoughnessMap = textureLoader.load('/assets/concreteRoughnessMap.png');
+        const concreteAmbientOcclusion = textureLoader.load('/assets/concreteAmbientOcclusionMap.png');
 
         // Set wrapping for the tile and ensure texture repetition is set for tiling
         concreteBaseColor.wrapS = THREE.RepeatWrapping;
@@ -190,11 +190,11 @@ class World {
         // --- MATERIAL SETUP ---
         const textureLoader = new THREE.TextureLoader();
 
-        const dirtBaseColor = textureLoader.load('/sources/assets/dirtBaseColor.png');
-        const dirtNormalMap = textureLoader.load('/sources/assets/dirtNormalMap.png');
-        const dirtHeightMap = textureLoader.load('/sources/assets/dirtHeightMap.png');
-        const dirtRoughnessMap = textureLoader.load('/sources/assets/dirtRoughnessMap.png');
-        const dirtAmbientOcclusion = textureLoader.load('/sources/assets/dirtAmbientOcclusionMap.png');
+        const dirtBaseColor = textureLoader.load('/assets/dirtBaseColor.png');
+        const dirtNormalMap = textureLoader.load('/assets/dirtNormalMap.png');
+        const dirtHeightMap = textureLoader.load('/assets/dirtHeightMap.png');
+        const dirtRoughnessMap = textureLoader.load('/assets/dirtRoughnessMap.png');
+        const dirtAmbientOcclusion = textureLoader.load('/assets/dirtAmbientOcclusionMap.png');
 
         [dirtBaseColor, dirtNormalMap, dirtHeightMap, dirtRoughnessMap, dirtAmbientOcclusion].forEach(t => {
             if (t) {
@@ -283,7 +283,7 @@ class World {
 
     loadStreetLight() {
         this.experience.gltfLoader.load(
-            '/streetlight.glb',
+            'streetlight.glb',
             (gltf) => {
                 const scaleFactor = 0.35;
                 const streetLightSpacing = 15;
@@ -323,7 +323,7 @@ class World {
 
     loadRoadBarrier() {
         this.experience.gltfLoader.load(
-            '/roadBarrier.glb',
+            'roadBarrier.glb',
             (gltf) => {
                 const scaleFactor = 0.3;
                 const roadBarrierSpacing = 2.7;
@@ -363,7 +363,7 @@ class World {
 
     loadTrees() {
         this.experience.gltfLoader.load(
-            '/trees.glb',
+            'trees.glb',
             (gltf) => {
                 const scaleFactor = 1;
                 const streetLightSpacing = 1;

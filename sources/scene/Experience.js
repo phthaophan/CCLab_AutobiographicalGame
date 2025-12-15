@@ -2,7 +2,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { HDRLoader } from 'three/addons/loaders/HDRLoader.js';
+import { HDRLoader } from 'three/examples/jsm/loaders/HDRLoader.js';
 
 // Scene Modules 
 import { World } from './World.js';
@@ -42,7 +42,7 @@ class Experience {
             antialias: true
         });
         this.renderer.physicallyCorrectLights = true;
-        this.renderer.outputEncoding = THREE.sRGBEncoding;
+        this.renderer.outputEncoding = THREE.SRGBColorSpace;
         this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
         this.renderer.toneMappingExposure = 0.8;
         this.renderer.shadowMap.enabled = true;
@@ -98,7 +98,7 @@ class Experience {
 
         // Background 
 
-        this.backgroundTexture = this.skyLoader.load('./sources/assets/puresky.hdr', function (texture) {
+        this.backgroundTexture = this.skyLoader.load('./assets/puresky.hdr', function (texture) {
             texture.mapping = THREE.EquirectangularReflectionMapping;
         });
         this.scene.background = this.backgroundTexture;
