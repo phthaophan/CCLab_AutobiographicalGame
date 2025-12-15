@@ -90,11 +90,11 @@ class World {
         const textureLoader = new THREE.TextureLoader();
 
         // Load all textures
-        const concreteBaseColor = textureLoader.load('/assets/concreteBaseColor.png');
-        const concreteNormalMap = textureLoader.load('/assets/concreteNormalMap.png');
-        const concreteHeightMap = textureLoader.load('/assets/concreteHeightMap.png');
-        const concreteRoughnessMap = textureLoader.load('/assets/concreteRoughnessMap.png');
-        const concreteAmbientOcclusion = textureLoader.load('/assets/concreteAmbientOcclusionMap.png');
+        const concreteBaseColor = textureLoader.load('concreteBaseColor.png');
+        const concreteNormalMap = textureLoader.load('concreteNormalMap.png');
+        const concreteHeightMap = textureLoader.load('concreteHeightMap.png');
+        const concreteRoughnessMap = textureLoader.load('concreteRoughnessMap.png');
+        const concreteAmbientOcclusion = textureLoader.load('concreteAmbientOcclusionMap.png');
 
         // Set wrapping for the tile and ensure texture repetition is set for tiling
         concreteBaseColor.wrapS = THREE.RepeatWrapping;
@@ -190,11 +190,11 @@ class World {
         // --- MATERIAL SETUP ---
         const textureLoader = new THREE.TextureLoader();
 
-        const dirtBaseColor = textureLoader.load('/assets/dirtBaseColor.png');
-        const dirtNormalMap = textureLoader.load('/assets/dirtNormalMap.png');
-        const dirtHeightMap = textureLoader.load('/assets/dirtHeightMap.png');
-        const dirtRoughnessMap = textureLoader.load('/assets/dirtRoughnessMap.png');
-        const dirtAmbientOcclusion = textureLoader.load('/assets/dirtAmbientOcclusionMap.png');
+        const dirtBaseColor = textureLoader.load('dirtBaseColor.png');
+        const dirtNormalMap = textureLoader.load('dirtNormalMap.png');
+        const dirtHeightMap = textureLoader.load('dirtHeightMap.png');
+        const dirtRoughnessMap = textureLoader.load('dirtRoughnessMap.png');
+        const dirtAmbientOcclusion = textureLoader.load('dirtAmbientOcclusionMap.png');
 
         [dirtBaseColor, dirtNormalMap, dirtHeightMap, dirtRoughnessMap, dirtAmbientOcclusion].forEach(t => {
             if (t) {
